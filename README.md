@@ -13,19 +13,19 @@ Pour obtenir Linux sur un système Windows 10, vous devez tout d'abord vérifier
 
 ## Installation de WSL
 
-Exécutez l'instruction suivante dans un PowerShell en tant qu'administrateur (voir [copie d'écran](img/powershell_demo.jpg)):
+Exécutez l'instruction suivante dans un PowerShell en tant qu'administrateur (voir [copie d'écran](img/powershell_demo.jpg)) :
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-Si ensuite, vous n'installez pas WSL2, redémarrez votre machine.
+Si ensuite, vous n'installez pas WSL2, redémarrez votre machine puis passez à l'étape *Installation d'une distribution Linux*.
 
 
 ## Installation de WSL 2
 
 Depuis mai 2020, une nouvelle version de Windows Subsystem for Linux (WSL2) est disponible. Celle-ci est plus performante que WSL mais utilise une technologie différente.
 
-Attention, WSL2 ne fonctionne pas dans une machine virtuelle de type VirtualBox. Dans ce cas, restez à WSL.
+**Attention** : WSL2 ne fonctionne pour l'instant pas dans une machine virtuelle de type VirtualBox. Dans ce cas, restez à WSL.
 
 Pour installer WSL2, exécutez cette commande dans un PowerShell en tant qu'administrateur :
 ```
@@ -38,7 +38,8 @@ wsl --set-default-version 2
 ```
 Si le message
 ```
-WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+WSL 2 requires an update to its kernel component. 
+For information please visit https://aka.ms/wsl2kernel
 ```
 apparait, suivez les nouvelles instructions :
 - allez sur le site https://aka.ms/wsl2kernel, 
@@ -58,15 +59,18 @@ Une fois WSL2 installé, redémarrez votre machine.
 
 ## Installation d'une distribution Linux
 
+À ce stade vous avez installé le sous-système Linux mais pas une distribution Linux à proprement dit.
+
 Nous vous conseillons l'installation de la distribution Linux [Ubuntu 20.04](https://www.microsoft.com/fr-fr/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab).
 
-Pour cela, ouvrez le [Microsoft Store](https://aka.ms/wslstore), choisissez *Ubuntu 20.04 LTS* puis lancez le téléchargement et enfin l'installation.
+Pour cela, ouvrez le [Microsoft Store](https://aka.ms/wslstore) (voir [copie d'écran](img/microsoft_store_demo.jpg)), choisissez *Ubuntu 20.04 LTS* puis lancez le téléchargement et enfin l'installation.
 
-L'installation va prendre quelques minutes. Vous devrez ensuite choisir un nouvel identifiant et un nouveau mot de passe. L'identifiant Linux doit être différent de votre identifiant Windows.
+L'installation va prendre quelques minutes. Vous choisirez ensuite un nouvel identifiant et un nouveau mot de passe. L'identifiant Linux doit être différent de votre identifiant Windows.
 
 Remarque : vous n'avez pas besoin de mettre un mot de passe compliqué.
 
-Un icône orange *Ubuntu 20.04 LTS* devrait apparaire dans le menu et vous permettre de lancer un terminal Linux.
+Un icône orange *Ubuntu 20.04 LTS* devrait apparaitre dans le menu (voir [copie d'écran](img/ubuntu_icon_demo.jpg)) et vous permettre de lancer un terminal Linux.
+
 
 ## Références et guides
 
