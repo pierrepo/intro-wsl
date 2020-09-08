@@ -6,17 +6,14 @@ WSL est un outil proposé par Microsoft pour installer Linux sur un système Win
 
 Cette fonctionnalité n'est disponible que pour **Windows 10**.
 
+
 ## Mise à jour 
 
 Pour obtenir Linux sur un système Windows 10, vous devez tout d'abord vérifier que votre système est à jour.
 
-
-
 ## Installation de WSL
 
-
-
-Exécutez ensuite l'instruction suivante dans un PowerShell en tant qu'administrateur :
+Exécutez l'instruction suivante dans un PowerShell en tant qu'administrateur (voir [copie d'écran](img/powershell_demo.jpg)):
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
