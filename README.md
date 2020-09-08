@@ -4,7 +4,7 @@ Ce document rassemble quelques ressources pour l'installation de Windows Subsyst
 
 WSL est un outil proposé par Microsoft pour installer Linux sur un système Windows.
 
-Cette fonctionnalité n'est disponible que pour **Windows 10**.
+Cette fonctionnalité n'est disponible que pour **Windows 10** 64 bits.
 
 
 ## Mise à jour 
@@ -92,30 +92,15 @@ Guides et tutos pour l'installation de WSL2 :
 - https://www.tech2tech.fr/installer-wsl-sous-syteme-linux-sur-windows-10/
 
 
-## Serveur X
-
-Nous vous conseillons également d'installer un serveur X qui vous permettra de lancer des logiciels graphiques sous Linux (par exemple l'éditeur de texte gedit).
-
-Pour cela, sous Windows :
-
-- installez le logiciel [VcXsrv](https://sourceforge.net/projects/vcxsrv/),
-- lancez-le en cliquant sur l'icône dans la barre de tâches et activez le fait qu'il tourne en tâche de fond.
-
-Sous Linux, tapez la commande 
-```
-export DISPLAY=:0
-```
-
-Vous pouvez ensuite lancer un logiciel graphique. Par exemple :
-```
-gedit
-```
-
-Nous vous conseillons d'ajouter la ligne 
-```
-export DISPLAY=:0
-```
-à la fin du fichier de configuration `~/.bashrc`. Cette instruction sera ainsi prise en compte à chaque fois que vous lancerez un terminal sous Linux.
-
-
 ## FAQ
+
+### Depuis un terminal Linux, comment accéder à mes fichiers qui sont sous Windows ?
+
+Le répertoire utilisateur de Windows est accessible depuis un terminal Linux en suivant ce chemin :
+
+```
+/mnt/c/Users/<windows-user>
+```
+
+où `<windows-user>` est le nom de l'utilisateur Windows.
+
